@@ -4,6 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("n number primes: ");
+        int n = sc.nextInt();
         sc.close();
+    }
+
+    public static void isPrime(int n) {
+        
     }
 }
