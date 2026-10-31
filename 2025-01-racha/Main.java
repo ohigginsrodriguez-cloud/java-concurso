@@ -28,6 +28,9 @@ public class Main {
                 actual = 0;
             } 
         }
+        if(actual > best) {
+            best = actual;
+        }
         System.out.print("best streak: " + best);
     }
 }
