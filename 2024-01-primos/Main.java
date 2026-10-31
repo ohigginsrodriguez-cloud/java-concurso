@@ -7,14 +7,30 @@ public class Main {
         System.out.print("n prime numbers: ");
         int n = sc.nextInt();
 
+        int count = 0;
+        int i = 0;
+
+        while(count < n) {
+            if(isPrime(i)) {
+                System.out.println(i);
+                count++;
+            }
+            i++;
+        }
+
         sc.close();
     }
 
-    public static boolean isPrime(int n) {
-        if(n < 2) {
+    public static boolean isPrime(int value) {
+        if(value < 2) {
             return false;
         }
 
-        for(int i = 0; i < n; i++)
+        for(int i = 2; i < value; i++) {
+            if(value % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
