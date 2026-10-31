@@ -9,7 +9,7 @@ public class Main {
 
         System.out.print("days num: ");
         int nDays = sc.nextInt();
-        
+
         int[] days = new int[nDays];
 
         for(int i = 0; i < days.length; i++) {
@@ -21,15 +21,12 @@ public class Main {
 
             if(days[i] >= 6) {
                 actual++;
-            } else if (days[i] < 6 && actual > best) {
-                best = actual;
+            } else  {
+                if(actual > best) {
+                    best = actual;
+                }
                 actual = 0;
-            } else {
-                actual = 0;
-            }
-        }
-        if(actual > best) {
-            best = actual;
+            } 
         }
         System.out.print("best streak: " + best);
     }
