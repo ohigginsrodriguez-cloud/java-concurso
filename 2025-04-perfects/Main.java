@@ -1,15 +1,31 @@
-import java.util.*;
-
 public class Main {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int count = 0;
+        int perfectos = 0;
+        int count = 1;
 
-        while (counter < 3) {
-            System.out.print();
+        while(perfectos < 3) {
+            if(esPerfecto(count)) {
+                System.out.println(count);
+                perfectos++;
+            }
+            count++;
         }
     }
-    public static int esPerfecto() {
+
+    public static boolean esPerfecto(int num) {
+
+        int total = 0;
+        for(int i = 1; i < num; i++) {
+            if(num % i == 0) {
+                total += i;
+            }
+        }
+
+        if(total == num) {
+            return true;
+        }
+
+        return false;
     }
 
 }
