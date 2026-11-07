@@ -1,7 +1,7 @@
 # Patterns
 
 ## Method
-- Underline the literal requirements of the sentence (ask for a functions? output type?.
+- Underline the literal requirements of the sentence ask for a functions? output type?.
 - Data that the sentence its giving, don't invent inputs.
 - First solve the problem just using pencil in a table, next write the plan in coments, next code.
 - Before to store something: "I need store this because___".
