@@ -12,7 +12,6 @@ public class Main {
             int y = sc.nextInt();
             System.out.println(solve(x, y));
         }
-
     }
 
     static int solve(int x, int y) {
