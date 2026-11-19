@@ -7,9 +7,10 @@ public class Plantilla {
 
         int t = sc.nextInt();
 
-        while (t-- > 0) {
+        for (int i = 0; i < t; i++) {
 
         }
+
     }
 
     static boolean solve() {
