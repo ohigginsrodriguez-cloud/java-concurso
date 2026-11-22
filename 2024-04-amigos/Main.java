@@ -9,31 +9,20 @@ public class Main {
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
 
-        if (solve(num1, num2)) {
+        if (num1 == solve(num2) && num2 == solve(num1)) {
             System.out.println("Amigos");
+        } else {
+            System.out.println("No son amigos");
         }
     }
 
-    static boolean solve(int n1, int n2) {
-
-        int total1 = 0;
-        int total2 = 0;
-
-        for (int i = 1; i < n1; i++) {
-            if (n1 % i == 0) {
-                total1 += i;
-            }
-
-        }
-        for (int j = 1; j < n2; j++) {
-            if (n2 % j == 0) {
-                total2 += j;
+    static int solve(int n) {
+        int total = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                total += i;
             }
         }
-
-        if (total1 == n2 && total2 == n1) {
-            return true;
-        }
-        return false;
+        return total;
     }
 }
