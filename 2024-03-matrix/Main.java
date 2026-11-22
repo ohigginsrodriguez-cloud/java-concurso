@@ -47,9 +47,10 @@ public class Main {
     }
 
     static void printMatrix(int[][] m) {
-        for (int[] row : m)
+        for (int[] row : m) {
             for (int v : row)
                 System.out.print(v + " ");
-        System.out.println();
+            System.out.println();
+        }
     }
 }
