@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.print("Ingrese el numero de productos: ");
         int n = sc.nextInt();
+        sc.nextLine();
 
         for (int i = 0; i < n; i++) {
             System.out.print("Ingrese el producto " + (i + 1) + ": ");
