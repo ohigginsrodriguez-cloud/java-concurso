@@ -5,6 +5,7 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Integer> bajas = new ArrayList<>();
     static ArrayList<Integer> altas = new ArrayList<>();
+    static ArrayList<Integer> alternada = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -21,18 +22,14 @@ public class Main {
             }
         }
 
-        int count = 0;
-        int[] alternada = new int[n];
-        while (count < n) {
+        while (!altas.isEmpty() || !bajas.isEmpty()) {
             if (!altas.isEmpty()) {
-                alternada[count] = altas.remove(0);
-                count++;
+                alternada.add(altas.remove(0));
             }
             if (!bajas.isEmpty()) {
-                alternada[count] = bajas.remove(0);
-                count++;
+                alternada.add(bajas.remove(0));
             }
         }
-        System.out.println("Playlist alternada: " + Arrays.toString(alternada));
+        System.out.println("Playlist alternada: " + alternada);
     }
 }
