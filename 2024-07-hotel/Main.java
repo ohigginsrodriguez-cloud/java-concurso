@@ -8,20 +8,17 @@ public class Main {
         int t = sc.nextInt(); // casos prueba
 
         for (int i = 0; i < t; i++) {
+            int n = sc.nextInt(); // huespedes
             ArrayList<Integer> llegadas = new ArrayList<>();
             ArrayList<Integer> salidas = new ArrayList<>();
-            int n = sc.nextInt(); // huespedes
 
             for (int j = 0; j < n; j++) {
-                int x = sc.nextInt(); // hora llegada
-                llegadas.add(x);
+                llegadas.add(sc.nextInt());// hora llegada
             }
 
             for (int k = 0; k < n; k++) {
-                int z = sc.nextInt(); // hora salida
-                salidas.add(z);
+                salidas.add(sc.nextInt());// hora salida
             }
-
             System.out.println(solve(llegadas, salidas));
         }
     }
@@ -29,21 +26,20 @@ public class Main {
     static int solve(ArrayList<Integer> llegadas, ArrayList<Integer> salidas) {
         int current = 0;
         int best = 0;
-        llegadas.sort(null);
-        int idxLlegada = 0;
         int idxSalida = 0;
+        int idxLlegada = 0;
+
+        llegadas.sort(null);
         salidas.sort(null);
 
         while (idxLlegada < llegadas.size()) {
             if (llegadas.get(idxLlegada) < salidas.get(idxSalida)) {
                 current++;
                 idxLlegada++;
-            } else if (salidas.get(idxSalida) <= llegadas.get(idxLlegada)) {
+                best = Math.max(current, best);
+            } else {
                 current--;
                 idxSalida++;
-            }
-            if (current > best) {
-                best = current;
             }
         }
         return best;
